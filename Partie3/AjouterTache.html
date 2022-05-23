@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tab_style.css">
+</head>
+<body>
+    <header>
+        <a href="https://temps-action.com/todo-list">
+            <img src="todo-list.jpg" alt="todo-img" srcset="todo-list.jpg 516">
+        </a>
+    </header>
+    <h1>Ajouter une tâche</h1>
+    <form name="newTask" action="#" class="box" id="new-task" class="container" onsubmit="ajouter();return false">
+        <label for="name"></label>
+        <input type="text" name="name" id="name" placeholder="Nom de la tâche">
+        <label for="date"></label>
+        <input type="date" name="date" id="date"></input>
+        <label for="category"></label>
+        <select name="category" id="category">
+            <option value="">Catégorie</option>
+            <option value="professionnel">Professionnel</option>
+            <option value="partagé">Partagé</option>
+            <option value="famille">Personnelle</option>
+        </select>
+        <button>
+            <input type="submit" value="Ajouter"/>
+        </button>
+        <button>
+            <input type="reset" value="Annuler"/>
+        </button>
+    </form>
+    <main class="container">
+        <button class="supprimer">Delete</button>
+        <table id="table">
+            <tr>
+                <th>Tâche</th>
+                <!-- <th>Détail</th> -->
+                <th>Date</th>
+                <th>Catégorie</th>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p><a href="https://temps-action.com/todo-list">Besoin d'aide ?</a></p>
+        <p><a href="menu.html">Revenir à l'accueil</a></p>
+    </footer>
+</body>
+    <script type="text/javascript" src="./script.js"></script>
+
+</html>

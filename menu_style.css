@@ -1,0 +1,111 @@
+body {
+    border: 8px solid brown;
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.header{
+    background-image: url("todolist-1.jpg");
+    width: 100%;
+    background-repeat: repeat;
+    text-align: center;
+}
+
+
+.footer{
+    background-image: url("todolist-1.jpg");
+    width: 100%;
+    text-align: center;
+    background-repeat: repeat;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#menu {
+    margin: 0px;
+    padding: 3em;
+    display: flex;
+    align-items: center;
+}
+
+a:hover{
+    color : white;
+}
+
+#menu ul{
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+}
+
+#menu li {
+    width: 8em;
+    text-align: center;
+    border-top-left-radius: 999px; ;
+    position: relative;
+    border-top-right-radius: 999px ;
+}
+
+#menu li:first-child{
+    background-color: rgb(116, 109, 219);
+}
+
+#menu li:nth-child(2){
+    background-color: red;
+}
+
+#menu li:last-child{
+    background-color: green;
+}
+
+#menu li:first-child:hover ul{
+    border-radius: 0;
+    max-height: none;
+} 
+
+#menu li:nth-child(2):hover ul {
+    border-radius : 0;
+    max-height: none;
+}
+
+#menu li:first-child:hover ul li{
+    background-color:rgb(116, 109, 219);
+    border-radius : 0;
+}
+
+#menu li:nth-child(2):hover ul li{
+    background-color: rgb(220, 83, 83);
+    border-radius : 0;
+}
+
+#menu li:first-child:hover ul li:hover{
+    background-color: rgb(49, 122, 122);
+    border-radius : 0;
+}
+
+#menu li:nth-child(2):hover ul li:hover{
+    background-color: rgb(191, 121, 121);
+    border-radius : 0;
+}
