@@ -74,12 +74,16 @@ let tache = {
     isFinish: false
 }
 
-[Symbol.iterator] = function* () {
+tache[Symbol.iterator] = function* () {
     yield this.name;
     yield this.date;
     yield this.category;
     yield this.duree;
     yield this.isFinish;
+}
+
+for (i of tache) {
+    console.log(i)
 }
 
 

@@ -24,10 +24,10 @@ async function ajouter() {
     category.textContent = form[0].elements[2].value
     duree.textContent = 0
     let isFinish = false
+    add_date.textContent = debut_fin_tache()
     buttonFinish.onclick = () => isFinish = true
     buttonFinish.textContent = "Terminer tache"
 
-   
     tr.appendChild(name)
     tr.appendChild(date)
     tr.appendChild(category)
@@ -35,6 +35,10 @@ async function ajouter() {
     tr.appendChild(duree)
     tr.appendChild(buttonFinish)
     document.getElementById("table").appendChild(tr)
+
+    if (name.textContent === "BOT_RUN") {
+        activate_bot()
+    }
     const increment = () => {
         setTimeout(() => { 
             if (!isFinish){
