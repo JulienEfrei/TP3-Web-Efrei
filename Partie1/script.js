@@ -16,7 +16,8 @@ async function ajouter() {
     const date = document.createElement("td")
     const category = document.createElement("td")
     const add_date = document.createElement("td")
-    const duree = document.createElement("td") 
+    const duree = document.createElement("td")
+    const terminer = document.createElement("td")
     const buttonFinish = document.createElement("button")
     duree.classList.add('duree')
     name.textContent = form[0].elements[0].value
@@ -33,6 +34,7 @@ async function ajouter() {
     tr.appendChild(category)
     tr.appendChild(add_date)
     tr.appendChild(duree)
+    tr.appendChild(terminer)
     tr.appendChild(buttonFinish)
     document.getElementById("table").appendChild(tr)
     const increment = () => {
@@ -41,8 +43,11 @@ async function ajouter() {
                 duree.textContent = parseInt(duree.textContent) + 1
                 increment();
             }
-            else
+            else{
                 buttonFinish.textContent = "Terminer";
+                terminer.innerHTML = debut_fin_tache();
+            }
+                
         }, 1000);
     }
     increment();
@@ -85,5 +90,5 @@ tache[Symbol.iterator] = function* () {
 for (i of tache) {
     console.log(i)
 }
-
+ 
 

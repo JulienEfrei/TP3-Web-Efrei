@@ -1,0 +1,7 @@
+[
+    {"task" : "Découper le jambon","date" :"17/12/2022","category" : "Personnelle"},
+    {"task" : "Prendre des billets","date" : "17/08/2022","category" : "Personnelle"},
+    {"task" : "Ranger la pièce commune","date" : "20/12/2024","category" : "Partagée"},
+    {"task" : "Finir le projet Web","date" : "02/06/2022","category" : "Professionnelle"},
+    {"task" : "Réserver les vacances","date" : "02/18/2025","category" : "Partagée"}
+]
